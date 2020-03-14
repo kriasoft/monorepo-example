@@ -1,0 +1,26 @@
+# GitHub Actions Workflow
+# https://help.github.com/actions
+
+name: build
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/build-web.yaml"
+      - "example.web/**"
+      - "example.api/schema.graphql"
+      - "!**/.vscode/**"
+      - "!README.md"
+env:
+  CI: true
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: yarn install --immutable-cache
+      - run: yarn workspace @example/web lint
+      - run: yarn workspace @example/web test
+      - run: yarn workspace @example/web build

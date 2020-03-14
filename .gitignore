@@ -1,0 +1,9 @@
+# Yarn package manager
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+
+# Misc
+.DS_Store

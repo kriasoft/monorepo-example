@@ -1,0 +1,15 @@
+# Dependabot configuration
+# https://dependabot.com/docs/config-file/
+
+version: 1
+
+update_configs:
+  - package_manager: "javascript"
+    directory: "/example.api"
+    update_schedule: "live"
+    version_requirement_updates: "increase_versions"
+
+  - package_manager: "javascript"
+    directory: "/example.web"
+    update_schedule: "live"
+    version_requirement_updates: "increase_versions"

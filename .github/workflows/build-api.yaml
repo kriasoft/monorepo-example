@@ -1,0 +1,25 @@
+# GitHub Actions Workflow
+# https://help.github.com/actions
+
+name: build
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/build-api.yaml"
+      - "example.api/**"
+      - "!**/.vscode/**"
+      - "!README.md"
+env:
+  CI: true
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: yarn install --immutable-cache
+      - run: yarn workspace @example/api lint
+      - run: yarn workspace @example/api test
+      - run: yarn workspace @example/api build
