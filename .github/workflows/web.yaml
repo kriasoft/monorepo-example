@@ -1,0 +1,32 @@
+# GitHub Actions Workflow
+# https://help.github.com/actions
+
+name: example.web
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "example.web/**"
+      - "!example.web/.vscode/**"
+      - "!README.md"
+  pull_request:
+    paths:
+      - "example.web/**"
+      - "!example.web/.vscode/**"
+      - "!README.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: yarn --cwd example.web install
+      - run: yarn --cwd example.web lint
+      - run: yarn --cwd example.web test
+        env:
+          CI: true
+      - run: yarn --cwd example.web build

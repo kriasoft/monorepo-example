@@ -1,0 +1,32 @@
+# GitHub Actions Workflow
+# https://help.github.com/actions
+
+name: example.api
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "example.api/**"
+      - "!example.api/.vscode/**"
+      - "!README.md"
+  pull_request:
+    paths:
+      - "example.api/**"
+      - "!example.api/.vscode/**"
+      - "!README.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: yarn --cwd example.api install
+      - run: yarn --cwd example.api lint
+      - run: yarn --cwd example.api test
+        env:
+          CI: true
+      - run: yarn --cwd example.api build

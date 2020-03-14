@@ -1,0 +1,12 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2",
+    "prettier": "^1.19.1"
+  }
+}

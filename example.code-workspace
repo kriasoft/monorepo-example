@@ -1,0 +1,51 @@
+{
+  "folders": [
+    {
+      "name": "example",
+      "path": "."
+    },
+    {
+      "path": "example.api"
+    },
+    {
+      "path": "example.web"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "mgmcdermott.vscode-language-babel",
+      "mikestead.dotenv",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "mquandalle.graphql",
+      "orta.vscode-jest",
+      "esbenp.prettier-vscode",
+      "rebornix.project-snippets",
+      "vscode-icons-team.vscode-icons",
+      "wakatime.vscode-wakatime"
+    ]
+  },
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "eslint.packageManager": "yarn",
+    "prettier.packageManager": "yarn",
+    "search.exclude": {
+      "**/build": true,
+      "**/node_modules": true,
+      "**/yarn-error.log": true,
+      "**/yarn.lock": true
+    },
+    "jest.disabledWorkspaceFolders": [".", ".dependabot", ".github"],
+    "cSpell.ignorePaths": [
+      "**/node_modules/**",
+      "**/vscode-extension/**",
+      "**/.git/objects/**",
+      ".vscode",
+      "**/yarn.lock",
+      "example.code-workspace"
+    ],
+    "cSpell.words": ["browserlist", "corejs", "dependabot"]
+  }
+}
