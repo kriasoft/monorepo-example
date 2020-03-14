@@ -1,0 +1,62 @@
+{
+  "folders": [
+    {
+      "path": ".github"
+    },
+    {
+      "path": "example.api"
+    },
+    {
+      "path": "example.web"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "mgmcdermott.vscode-language-babel",
+      "mikestead.dotenv",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "mquandalle.graphql",
+      "orta.vscode-jest",
+      "esbenp.prettier-vscode",
+      "rebornix.project-snippets",
+      "vscode-icons-team.vscode-icons"
+    ]
+  },
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "eslint.packageManager": "yarn",
+    "prettier.packageManager": "yarn",
+    "search.exclude": {
+      "**/build": true,
+      "**/node_modules": true,
+      "**/yarn-error.log": true,
+      "**/yarn.lock": true
+    },
+    "jest.disabledWorkspaceFolders": [".github"],
+    "typescript.tsdk": "../.vscode/pnpify/typescript/lib",
+    "cSpell.ignorePaths": [
+      ".pnp.*",
+      ".vscode",
+      "**/.git/objects/**",
+      "**/build/**",
+      "**/node_modules/**",
+      "**/yarn.lock",
+      "example.code-workspace"
+    ],
+    "cSpell.words": [
+      "browserslist",
+      "corejs",
+      "dependabot",
+      "downlevel",
+      "esnext",
+      "pnpify",
+      "sourcemap",
+      "tslib",
+      "typechecking",
+      "yarnpkg"
+    ]
+  }
+}
