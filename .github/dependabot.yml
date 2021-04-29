@@ -1,0 +1,152 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/example.api"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.10
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.1
+    - 7.13.10
+    - 7.13.13
+    - 7.13.14
+    - 7.13.15
+    - 7.13.8
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.14.1
+    - 4.14.2
+    - 4.15.0
+    - 4.15.1
+    - 4.15.2
+    - 4.16.0
+    - 4.16.1
+    - 4.17.0
+    - 4.18.0
+    - 4.19.0
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.23
+    - 14.14.24
+    - 14.14.25
+    - 14.14.26
+    - 14.14.27
+    - 14.14.28
+    - 14.14.29
+    - 14.14.30
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.36
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.20
+    - 26.0.21
+    - 26.0.22
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.11
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.0
+    - 7.13.10
+    - 7.13.12
+    - 7.13.5
+    - 7.13.8
+    - 7.13.9
+  - dependency-name: "@babel/plugin-proposal-object-rest-spread"
+    versions:
+    - 7.12.1
+    - 7.12.13
+    - 7.13.0
+- package-ecosystem: npm
+  directory: "/example.web"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.23
+    - 14.14.24
+    - 14.14.25
+    - 14.14.26
+    - 14.14.27
+    - 14.14.28
+    - 14.14.29
+    - 14.14.30
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.36
+    - 14.14.37
+    - 14.14.39
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.10
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.1
+    - 7.13.10
+    - 7.13.13
+    - 7.13.14
+    - 7.13.15
+    - 7.13.8
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.14.1
+    - 4.14.2
+    - 4.15.0
+    - 4.15.1
+    - 4.15.2
+    - 4.16.0
+    - 4.16.1
+    - 4.17.0
+    - 4.18.0
+    - 4.19.0
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.20
+    - 26.0.21
+    - 26.0.22
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.11
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.0
+    - 7.13.10
+    - 7.13.12
+    - 7.13.5
+    - 7.13.8
+    - 7.13.9
+  - dependency-name: "@babel/plugin-proposal-object-rest-spread"
+    versions:
+    - 7.12.1
+    - 7.12.13
+    - 7.13.0
